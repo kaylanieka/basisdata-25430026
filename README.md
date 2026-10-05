@@ -1,8 +1,15 @@
+# Praktikum Basis Data
+
+**Identitas Mahasiswa:**
+* **Nama:** Kaylani Eka Putri Damayanti
+* **NIM:** 25430026
+* **Kelas:** A
+
 ---
 
 ## Identitas Proyek
-* **Tema Proyek:** Sistem Manajemen Toko Ritel (Store)
-* **Nama Database:** `store_026`
-* **Nama Organisasi Fiktif:** Store Utama KE
+* **Tema Proyek:** Klinik
+* **Nama Database:** `klinik_026`
+* **Nama Organisasi Fiktif:** Klinik Cendekia KD
 * **Lingkup Layanan:**
-  Store Utama KE adalah organisasi ritel fiktif yang menyediakan berbagai produk kebutuhan harian masyarakat secara modern dan terintegrasi. Sistem informasi basis data ini dibangun untuk mempermudah pengelolaan inventaris barang, pencatatan transaksi penjualan ritel, manajemen data pemasok (supplier), serta pemantauan stok produk secara real-time guna meningkatkan kualitas layanan dan efisiensi operasional toko.
+  Klinik Cendekia KD adalah organisasi pelayanan kesehatan fiktif yang menyediakan layanan pendaftaran pasien, pencatatan rekam medis kunjungan, pemberian tindakan medis, pembuatan resep obat, serta sistem pembayaran terpadu. Sistem informasi basis data ini dirancang untuk mempermudah pengelolaan data operasional klinik secara efisien dan terintegrasi guna meningkatkan kualitas pelayanan kesehatan masyarakat.
