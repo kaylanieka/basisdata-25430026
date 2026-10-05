@@ -2,7 +2,7 @@
 
 **Identitas Mahasiswa:**
 * **Nama:** Kaylani Eka Putri Damayanti
-* **NIM:** 25430026
+* **NPM:** 25430026
 * **Kelas:** A
 
 ---
