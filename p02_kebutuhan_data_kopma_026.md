@@ -1,0 +1,72 @@
+# Dokumen Kebutuhan Data Koperasi Mahasiswa Sejahtera (Kopma)
+**Nama Basis Data:** kopma_026
+
+## 1. Latar Belakang dan Aktivitas Organisasi
+Kopma mengelola transaksi penjualan alat tulis, makanan, dan minuman. Pencatatan manual dialihkan ke sistem basis data terstruktur.
+
+## 2. Aktor dan Proses Bisnis
+- PB-01: Mendaftarkan Anggota (Aktor: Kasir / Mahasiswa)
+- PB-02: Mencatat Penjualan (Aktor: Kasir)
+- PB-03: Memesan Barang ke Pemasok (Aktor: Petugas Gudang)
+- PB-04: Menerima Barang dari Pemasok (Aktor: Petugas Gudang)
+- PB-05: Menyusun Laporan Bulanan (Aktor: Ketua Koperasi)
+
+## 3. Dokumen Sumber yang Dianalisis
+Dokumen nota penjualan mencakup: nomor nota, tanggal/jam, kasir, ID anggota, daftar barang, qty, dan harga saat transaksi.
+
+## 4. Entitas Kandidat dan Elemen Data
+- Anggota (no_anggota, nim_anggota, nama_anggota, prodi_anggota, no_hp_anggota, status_anggota)
+- Barang (kode_barang, nama_barang, kategori_barang, harga_jual_barang, stok_barang, stok_min_barang)
+- Penjualan (no_nota_penjualan, tgl_penjualan, id_petugas, id_anggota, bayar_penjualan)
+- Detail_Penjualan (id_penjualan, id_barang, qty_detail_penjualan, harga_satuan_detail_penjualan)
+- Petugas (kode_petugas, nama_petugas, peran_petugas)
+- Pemasok (nama_pemasok, telepon_pemasok, alamat_pemasok)
+- Pembelian & Detail_Pembelian
+
+## 5. Aturan Bisnis
+- AB-01: Setiap nota memiliki nomor unik dan minimal satu baris barang.
+- AB-02: Penjualan boleh tanpa anggota (pembeli umum); anggota aktif dapat diskon 5%.
+- AB-03: Stok barang tidak boleh bernilai negatif (penjualan ditolak jika qty > stok).
+- AB-04: Harga jual pada nota disimpan per baris dan tidak berubah meskipun harga barang di katalog naik.
+- AB-05: NIM anggota bersifat unik.
+
+## 6. Kebutuhan Informasi
+- KI-01: Omzet dan jumlah nota per hari dan per bulan.
+- KI-02: 5 barang terlaris per bulan.
+- KI-03: Barang dengan stok di bawah batas minimum.
+- KI-04: 10 anggota dengan belanja terbesar per bulan.
+
+## 7. Matriks CRUD
+| Proses | Anggota | Barang | Penjualan | Detail_Penjualan | Pemasok | Pembelian |
+|---|---|---|---|---|---|---|
+| PB-01 | C | | | | | |
+| PB-02 | R | R, U | C | C | | |
+| PB-03 | | R | | | R | C |
+| PB-04 | | U | | | R | U |
+| PB-05 | R | R | R | R | | R |
+
+## 8. Kamus Data Awal
+| Elemen | Arti | Contoh | Aturan | Penanggung Jawab |
+|---|---|---|---|---|
+| no_anggota | Nomor anggota | A-0457 | Unik, format A-4 digit | Ketua |
+| nim_anggota | NIM anggota | 2301010026 | Unik, 10 digit | Ketua |
+| no_nota_penjualan | Nomor nota | PJ-2609-0142 | Unik per nota | Kasir |
+| harga_satuan_detail_penjualan | Harga jual saat transaksi | 4000 | Bilangan bulat >= 0 | Kasir |
+| stok_barang | Jumlah persediaan | 35 | Bilangan bulat >= 0 | Petugas Gudang |
+
+## 9. Kebutuhan Non-Fungsional Data
+- Perkiraan volume harian: ~150 nota per hari.
+- Retensi data: Disimpan minimal 5 tahun.
+- Privasi: Nomor HP anggota bersifat pribadi dan hanya diakses oleh Ketua.
+```[cite: 45, 46, 47, 48, 49]
+
+---
+
+### **5. Menyimpan Pekerjaan ke GitHub**
+
+Kirim berkas dokumen kebutuhan data `kopma_026` ke repositori GitHub Anda[cite: 36, 49]:
+
+```bash
+git add p02_kebutuhan_data_kopma_2301010026.md[cite: 36]
+git commit -m "p02: dokumen kebutuhan data kopma_026"[cite: 36, 49]
+git push origin main[cite: 36]
