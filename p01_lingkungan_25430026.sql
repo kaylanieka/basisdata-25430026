@@ -30,3 +30,4 @@
 -- git commit -m "p01: inisialisasi repositori dan skrip lingkungan"
 -- git remote add origin https://github.com/kaylanieka/basisdata-25430026.git
 -- git push -u origin main 
+ 
