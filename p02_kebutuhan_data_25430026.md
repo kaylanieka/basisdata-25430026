@@ -134,4 +134,4 @@ Klinik Sehat Bersama 026 mengelola pelayanan pendaftaran pasien, pemeriksaan med
 - **Aturan Akses:**
   - **Resepsionis:** Dapat mencatat dan melihat `pasien` serta `pendaftaran`, tidak dapat membaca `diagnosa_pemeriksaan`.
   - **Dokter:** Memiliki akses membaca/menulis `pemeriksaan`, `detail_tindakan`, dan `resep_detail`.
-  - **Apoteker:** Berhak membaca `resep_detail` serta memperbarui `stok_obat`.
+  - **Apoteker:** Berhak membaca `resep_detail` serta memperbarui `stok_obat`. 
