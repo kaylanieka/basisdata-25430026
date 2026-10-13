@@ -79,4 +79,4 @@ Dokumen nota penjualan mencakup: nomor nota, tanggal/jam, kasir, ID anggota, daf
 2. **Pernyataan Kabur:** *"Sistem harus cepat mencari barang."*
    - **Dapat Diuji:** Pencarian data barang berdasarkan `kode_barang` atau `nama_barang` mengembalikan hasil dalam waktu kurang dari 2 detik.
 3. **Pernyataan Kabur:** *"Laporan stok harus akurat."*
-   - **Dapat Diuji:** Stok barang berkurang secara otomatis saat transaksi penjualan berhasil di-commit dan bertambah saat transaksi penerimaan barang dikonfirmasi. Penjualan ditolak jika `qty` melebihi stok yang tersedia.
+   - **Dapat Diuji:** Stok barang berkurang secara otomatis saat transaksi penjualan berhasil di-commit dan bertambah saat transaksi penerimaan barang dikonfirmasi. Penjualan ditolak jika `qty` melebihi stok yang tersedia. 
